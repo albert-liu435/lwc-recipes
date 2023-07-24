@@ -198,3 +198,10 @@ npm run prettier
 ## Code Tours
 
 Code Tours are guided walkthroughs that will help you understand the app code better. To be able to run them, install the [CodeTour VSCode extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour).
+
+
+
+
+地址：https://resourceful-fox-vetwoz-dev-ed.trailblaze.lightning.force.com/lightning/n/trlhdtips__Welcome
+用户：albert.liu435@resourceful-fox-vetwoz.com
+密码：Aa876543211234
