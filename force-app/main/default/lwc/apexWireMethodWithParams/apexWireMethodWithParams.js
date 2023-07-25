@@ -9,8 +9,9 @@ export default class ApexWireMethodWithParams extends LightningElement {
 
     @wire(findContacts, { searchKey: '$searchKey' })
     contacts;
-
+// 监听变化
     handleKeyChange(event) {
+        //放弃此方法：只要在delay延迟内调用此函数，就不要更新反应性属性。这是为了避免大量的Apex方法调用。
         // Debouncing this method: Do not update the reactive property as long as this function is
         // being called within a delay of DELAY. This is to avoid a very large number of Apex method calls.
         window.clearTimeout(this.delayTimeout);

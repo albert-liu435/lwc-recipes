@@ -5,7 +5,11 @@ import { LightningElement } from 'lwc';
 // //查看permissionsets文件夹下面的定义
 import hasAccessRestrictedUI from '@salesforce/customPermission/accessRestrictedUIPermission';
 
-import hasRecipes from '@salesforce/userPermission/recipesPermission'
+import hasRunReports from '@salesforce/userPermission/RunReports';
+
+//查看 Permission Sets->System Permissions或者Users
+//Manage Users
+import hasManageUsers from '@salesforce/userPermission/ManageUsers';
 
 export default class MiscPermissionBasedUI extends LightningElement {
     //自定义permission
@@ -16,6 +20,10 @@ export default class MiscPermissionBasedUI extends LightningElement {
     }
 
     get isRestrictedRecipesAccessible() {
-        return hasRecipes;
+        return hasRunReports;
+    }
+
+    get isManageUsers() {
+        return hasManageUsers;
     }
 }

@@ -20,6 +20,7 @@ export default class MiscToastNotification extends LightningElement {
         this.messageText = event.target.value;
     }
 
+    //change 事件变更
     variantChange(event) {
         this.variant = event.target.value;
     }

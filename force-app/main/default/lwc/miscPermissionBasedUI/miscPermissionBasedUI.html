@@ -14,6 +14,14 @@
             <template lwc:else>
                 <p>The permission set is not assigned</p>
             </template>
+
+
+            <template lwc:if={isManageUsers}>
+                <p>The isManageUsers set is assigned</p>
+            </template>
+            <template lwc:else>
+                <p>The isManageUsers set is not assigned</p>
+            </template>
         </div>
         <c-view-source source="lwc/miscPermissionBasedUI" slot="footer">
             Use custom permission to conditionally render UI. To change the
