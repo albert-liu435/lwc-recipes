@@ -49,6 +49,7 @@ export default class LmsSubscriberWebComponent extends LightningElement {
 
     // Encapsulate logic for LMS subscribe.
     subscribeToMessageChannel() {
+        //订阅消息通道
         this.subscription = subscribe(
             this.messageContext,
             RECORD_SELECTED_CHANNEL,
@@ -56,13 +57,16 @@ export default class LmsSubscriberWebComponent extends LightningElement {
         );
     }
 
+    //处理获取到的消息信息
     // Handler for message received by component
     handleMessage(message) {
         this.recordId = message.recordId;
     }
 
+    //标准的lwc声明周期函数，用于进行消息的订阅
     // Standard lifecycle hooks used to sub/unsub to message channel
     connectedCallback() {
+        //订阅消息通道
         this.subscribeToMessageChannel();
     }
 

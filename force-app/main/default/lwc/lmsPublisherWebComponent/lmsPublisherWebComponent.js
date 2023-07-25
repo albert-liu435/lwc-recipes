@@ -6,16 +6,19 @@ import { publish, MessageContext } from 'lightning/messageService';
 import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected__c';
 
 export default class LmsPublisherWebComponent extends LightningElement {
+    //获取contacts
     @wire(getContactList)
     contacts;
 
+    // To pass scope, you must get a message context.
     @wire(MessageContext)
     messageContext;
 
     // Respond to UI event by publishing message
     handleContactSelect(event) {
+        //
         const payload = { recordId: event.target.contact.Id };
-
+        //发送消息
         publish(this.messageContext, RECORD_SELECTED_CHANNEL, payload);
     }
 }

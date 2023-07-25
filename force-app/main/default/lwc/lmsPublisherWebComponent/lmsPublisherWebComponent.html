@@ -3,6 +3,7 @@
         title="LmsPublisherWebComponent"
         icon-name="custom:custom30"
     >
+    <!-- oncontactselect：事件监听 -->
         <div class="slds-m-around_medium" oncontactselect={handleContactSelect}>
             <template lwc:if={contacts.data}>
                 <template for:each={contacts.data} for:item="contact">
